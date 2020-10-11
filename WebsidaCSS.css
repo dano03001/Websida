@@ -1,0 +1,121 @@
+body.container{ /* grid */
+	background-color: lavender; /* bakgrundsfärg */
+	display: grid; /* visar grid */
+	grid-template-columns: 10vh 1fr 1fr 1fr 1fr 10vh;  /* kolumner i grid */
+	grid-template-rows: 100px 55px 400px 200px; /* rader i grid */
+	grid-template-areas: /* områdernas namn */
+	". header header header header ."
+	". nav nav nav nav ."
+	". main main main main ."
+	". footer footer footer footer .";
+}
+
+h1, h2{ /* gruppselektor */
+	font-family: "trebuchet ms"; /* typsnitt */
+	font-size: 25px; /* typsnitt storlek */
+	text-align: center; /* vad texten ska vara */
+	text-decoration: underline; /* underlinje på text */
+}
+
+p{ /* klasselektor för p */
+	color: darkslategrey; /* färg */
+	font-family: tahoma; 
+	line-height: 1.6; /* radavstånd */
+}
+
+ul{ /* klasselektor för oordnad lista */
+	font-family: "trebuchet ms";
+	line-height: 1.6;
+}
+
+ol{ /* klasselektor för ordnad lista */
+	font-family: "trebuchet ms";
+	line-height: 1.6;
+	text-align: center;
+}
+
+a:link{ /* obesökt länk  */
+	color: silver;
+	
+}
+a:hover{ /* länk som musen är över */
+	color: gold;
+}
+
+a:visited{ /* besökt länk */
+	color: darkslateblue;
+}
+
+header{ /* område för rubrik */
+	grid-area: header; /* område på dok. */
+	background-color: slateblue; /* bakgrunds färg */
+	border: 2px solid white; /* linje runt text */
+}
+
+nav{ /* område för meny */
+	grid-area: nav;
+	text-align: center; 
+	background-color: DarkCyan;
+	border: 4px white;
+}
+
+main{ /* huvudområde */
+	grid-area: main;
+	background-color: white;
+}
+
+footer{ /* område för fotnot */
+	grid-area: footer;
+	background-color: springgreen;
+}
+
+ul.meny{ /* lista på meny */
+	list-style-type: none; /* inga punkter */
+	padding: 0; /* yta runt gränsen */
+	border: 1px white;
+}
+
+nav ul{ /* grid för meny */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-color: crimson;
+	border: 2px solid slategrey;
+}
+
+table, tr, th, td{ /* gruppselektor för tabell */
+	margin-right: auto; /* tabellen kommer i mitten av dok. */
+	margin-left: auto; 
+	margin-top: 1%; /* tabellen lite nedanför toppen */
+	border: 1px solid black;
+	border-collapse: collapse; /* gränsen görs till en linje */
+	width: 500px; /* bredd */
+	height: 50px; /* höjd */
+}
+
+main img{ /* bild i Main */
+	float: right; /* bilden är till höger */
+	height: 360px;
+	width: 480px;
+	margin-right: 10%;
+	margin-top: 1%;
+}
+footer img{ /* bild i footer */
+	float: right;
+	height: 150px;
+	width: 225px;
+	margin-right: 10%;
+	margin-top: 1%;
+
+}
+
+tr:nth-child(even){ /* zebra striping för jämna rutor */
+	background-color: lightskyblue; 
+}
+
+tr:nth-child(odd){ /* zebra striping för ojämna rutor */
+	background-color: darkorchid;
+}
+
+tr:nth-child(1){ /* färg på första rutan */
+	background-color: darkseagreen;
+}
